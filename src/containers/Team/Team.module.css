@@ -1,0 +1,41 @@
+.mainTeamContainer{
+padding-top:30px;
+}
+.teamContainer > p , .detailContainer > p{
+  font-size: 28px;
+  margin-bottom: 5px;
+}
+
+.container{
+  display:flex;
+  width: 100%;
+  margin-bottom: 20px;
+  flex-direction: column;
+    align-items: center;
+    margin: 5px;
+
+  }
+
+.teamShowcase{
+  background-color: #F2F0F0;
+  min-height: 350px;
+  width: 100%;
+  border-radius: 10px;
+  max-width: 400px;
+  min-width: 300px;
+  padding: 5px 0px;
+}
+
+.spriteContainer{
+  display: flex;
+  justify-content: center;
+  cursor:pointer;
+  width: max-content;
+  margin: 0 auto;
+  padding:5px;
+}
+
+.selectedPokemon{
+  background-color: #E0E0E0;
+  border-radius: 5px;
+}
