@@ -28,6 +28,7 @@ function PokemonDetails({ pokemon, config = null, pokemonTeam, setPokemonTeam, t
       toastActive('Pokemon has been removed from the team', 'warning');
     }
   }
+  console.log(pokemonTeam.map(o => o.id).includes(pokemon.id))
 
   return (
     <div style={detailContainerWidth} className={classes.pokemonDetailContainer}>
@@ -35,9 +36,11 @@ function PokemonDetails({ pokemon, config = null, pokemonTeam, setPokemonTeam, t
         <div className={classes.spriteContainer}>
           <img src={pokemon.sprite} alt={pokemon.name} />
         </div>
-        <div className={classes.teamMemberIndicator}>
-          {'Team Member'}
-        </div>
+        {pokemonTeam.map(o => o.id).includes(pokemon.id) && config === 'add'
+          ? <div className={classes.teamMemberIndicator}>
+            {'Team Member'}
+          </div>
+          : null}
       </div>
       <div className={classes.rightContainer}>
         <p>{`ID: ${pokemon.id}`}</p>

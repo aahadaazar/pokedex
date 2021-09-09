@@ -15,11 +15,15 @@ function Home() {
     if (loading) {
       setPokemonData();
     }
+    // eslint-disable-next-line
+  }, [loading]);
+
+  useEffect(() => {
     return () => {
       setPokemonData()
     }
     // eslint-disable-next-line
-  }, [loading]);
+  }, [])
 
   return (
     <div className={classes.mainHomeContainer}>
